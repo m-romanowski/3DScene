@@ -1,5 +1,5 @@
 <project>
- <mesh name="Ziemia">
+ <mesh name="Earth">
   <vertice nz="0.7078" u="0.9886" ny="0.7063" v="0.75" z="0.7071" nx="0" y="0.7071" x="0"/>
   <vertice nz="0.7699" u="0.9731" ny="0.6336" v="0.7188" z="0.7693" nx="0.0758" y="0.6344" x="0.0758"/>
   <vertice nz="0.7736" u="0.9886" ny="0.6336" v="0.7188" z="0.773" nx="0" y="0.6344" x="0"/>
@@ -5987,13 +5987,13 @@
   <face A="1959" B="1956" C="2015"/>
   <face A="1988" B="2016" C="24"/>
   <face A="1958" B="2017" C="1990"/>
-  <texture width="1920" path="C:/Users/Marcin/Desktop/3DScene/styles/textures/earth2.jpg" height="1080"/>
+  <texture width="1920" path="resources/textures/earth2.jpg" height="1080"/>
   <position z="-2" y="0" x="0"/>
   <rotation z="0" y="22" x="-3"/>
   <scaling z="1" y="1" x="1"/>
   <shearing z="0" y="0" x="0"/>
  </mesh>
- <mesh name="Ksiezyc">
+ <mesh name="Moon">
   <vertice nz="0.7078" u="0.9886" ny="0.7063" v="0.75" z="0.7071" nx="0" y="0.7071" x="0"/>
   <vertice nz="0.7699" u="0.9731" ny="0.6336" v="0.7188" z="0.7693" nx="0.0758" y="0.6344" x="0.0758"/>
   <vertice nz="0.7736" u="0.9886" ny="0.6336" v="0.7188" z="0.773" nx="0" y="0.6344" x="0"/>
@@ -11981,7 +11981,7 @@
   <face A="1959" B="1956" C="2015"/>
   <face A="1988" B="2016" C="24"/>
   <face A="1958" B="2017" C="1990"/>
-  <texture width="1920" path="C:/Users/Marcin/Desktop/3DScene/styles/textures/moon.jpg" height="1080"/>
+  <texture width="1920" path="resources/textures/moon.jpg" height="1080"/>
   <position z="-15" y="2" x="-1"/>
   <rotation z="0" y="17" x="1"/>
   <scaling z="1" y="1" x="1"/>
