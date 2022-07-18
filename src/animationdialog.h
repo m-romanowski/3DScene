@@ -25,7 +25,6 @@ private slots:
     void on_aRotXValue_valueChanged(double arg1);
     void on_aRotYValue_valueChanged(double arg1);
     void on_aRotZValue_valueChanged(double arg1);
-
     void on_aExitButton_clicked();
 
 private:
