@@ -8,10 +8,8 @@ Texture::Texture()
     this->color = Color(255, 255, 255, 255);
 }
 
-Texture::Texture(QString filename, int width, int height)
+Texture::Texture(QString filename)
 {
-    this->width = width;
-    this->height = height;
     this->filename = filename;
 
     loadTexture();
@@ -29,13 +27,18 @@ Texture::Texture(Color color, int width, int height)
 
 void Texture::loadTexture()
 {
-    // Ładuję obraz do QImage:
-    img = new QImage(width, height, QImage::Format_ARGB32);
-
-    if(filename.isEmpty())
+    if (filename.isEmpty())
+    {
+        img = new QImage(width, height, QImage::Format_ARGB32);
         img->fill(QColor(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()));
+    }
     else
+    {
+        img = new QImage();
         img->load(filename);
+        width = img->width();
+        height = img->height();
+    }
 }
 
 Color Texture::mapTexture(float tu, float tv)

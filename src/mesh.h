@@ -8,38 +8,37 @@
 #include <vertex.h>
 #include <animation.h>
 
-// Structure for storing values ​​when drawing lines of individual triangles solid object faces
-struct lineData
-{
-    int currentY;
-    float ndotla;
-    float ndotlb;
-    float ndotlc;
-    float ndotld;
-
-    float ua;
-    float ub;
-    float uc;
-    float ud;
-
-    float va;
-    float vb;
-    float vc;
-    float vd;
-};
-
 class Mesh
 {
 public:
-    Mesh(QString Name);
+    // Structure for storing values when drawing lines of individual triangles solid object faces
+    struct Edge
+    {
+        int currentY;
+        float ndotla;
+        float ndotlb;
+        float ndotlc;
+        float ndotld;
+
+        float ua;
+        float ub;
+        float uc;
+        float ud;
+
+        float va;
+        float vb;
+        float vc;
+        float vd;
+    };
+
+    Mesh(QString name);
 
     int id;
     QString name;
     QVector3D position;
     QVector3D rotation;
-    QVector3D scaling;
-    QVector3D shearing;
-
+    QVector3D scale;
+    QVector3D skew;
     Animation animation;
     std::vector<Vertex> vertices;
     std::vector<Face> faces;

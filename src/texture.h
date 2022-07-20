@@ -9,7 +9,7 @@ class Texture
 {
 public:
     Texture();
-    Texture(QString filename, int width, int height);
+    Texture(QString filename);
     Texture(Color color, int width, int height);
 
     QString filename;

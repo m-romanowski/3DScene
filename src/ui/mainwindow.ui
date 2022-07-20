@@ -517,464 +517,11 @@
     <item>
      <layout class="QHBoxLayout" name="middleLayout">
       <item>
-       <widget class="QFrame" name="scene">
-        <property name="palette">
-         <palette>
-          <active>
-           <colorrole role="WindowText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </active>
-          <inactive>
-           <colorrole role="WindowText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </inactive>
-          <disabled>
-           <colorrole role="WindowText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="96">
-              <red>164</red>
-              <green>166</green>
-              <blue>168</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </disabled>
-         </palette>
+       <layout class="QHBoxLayout" name="sceneContainer">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
         </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <widget class="QLabel" name="currentFps">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>91</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="palette">
-          <palette>
-           <active>
-            <colorrole role="WindowText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Button">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Midlight">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Dark">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>127</red>
-               <green>127</green>
-               <blue>127</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Mid">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>170</red>
-               <green>170</green>
-               <blue>170</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Text">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="BrightText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ButtonText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Base">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Window">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Shadow">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="AlternateBase">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ToolTipBase">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>220</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ToolTipText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-           </active>
-           <inactive>
-            <colorrole role="WindowText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Button">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Midlight">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Dark">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>127</red>
-               <green>127</green>
-               <blue>127</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Mid">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>170</red>
-               <green>170</green>
-               <blue>170</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Text">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="BrightText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ButtonText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Base">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Window">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Shadow">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="AlternateBase">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ToolTipBase">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>220</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ToolTipText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-           </inactive>
-           <disabled>
-            <colorrole role="WindowText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>127</red>
-               <green>127</green>
-               <blue>127</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Button">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Midlight">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Dark">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>127</red>
-               <green>127</green>
-               <blue>127</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Mid">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>170</red>
-               <green>170</green>
-               <blue>170</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Text">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>127</red>
-               <green>127</green>
-               <blue>127</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="BrightText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ButtonText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>127</red>
-               <green>127</green>
-               <blue>127</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Base">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Window">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="Shadow">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="AlternateBase">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>255</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ToolTipBase">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>255</red>
-               <green>255</green>
-               <blue>220</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="ToolTipText">
-             <brush brushstyle="SolidPattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-           </disabled>
-          </palette>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::RichText</enum>
-         </property>
-         <property name="indent">
-          <number>1</number>
-         </property>
-        </widget>
-       </widget>
+       </layout>
       </item>
       <item>
        <widget class="QScrollArea" name="optionsScrollArea">
@@ -997,9 +544,9 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
-           <width>284</width>
-           <height>1100</height>
+           <y>-665</y>
+           <width>302</width>
+           <height>1255</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -1088,22 +635,6 @@
              </widget>
             </item>
             <item>
-             <spacer name="verticalSpacer_4">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Minimum</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>30</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
              <widget class="QLabel" name="objSettingsLabel">
               <property name="minimumSize">
                <size>
@@ -1168,22 +699,6 @@
              </layout>
             </item>
             <item>
-             <spacer name="verticalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Minimum</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>30</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
              <widget class="QLabel" name="objTransformationLabel">
               <property name="minimumSize">
                <size>
@@ -1209,1160 +724,1138 @@
              </widget>
             </item>
             <item>
-             <layout class="QGridLayout" name="transformationLayout">
-              <property name="sizeConstraint">
-               <enum>QLayout::SetMaximumSize</enum>
+             <widget class="QGroupBox" name="translationGroupBox">
+              <property name="title">
+               <string>Translation</string>
               </property>
-              <property name="verticalSpacing">
-               <number>1</number>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="0" column="0">
+                <widget class="QLabel" name="transXLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>x</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLineEdit" name="transYValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="transYLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>300</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>y</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="transZLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>z</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLineEdit" name="transXValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="subTransXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="subTransYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="subTransZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLineEdit" name="transZValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="addTransXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QPushButton" name="addTransYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QPushButton" name="addTransZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="rotationGroupBox">
+              <property name="title">
+               <string>Rotation</string>
               </property>
-              <item row="9" column="2">
-               <widget class="QLineEdit" name="scYValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QLineEdit" name="transZValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="2">
-               <widget class="QLineEdit" name="scZValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="0">
-               <widget class="QLabel" name="scYLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Y scale</string>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="0">
-               <widget class="QLabel" name="scZLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Z scale</string>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="3">
-               <widget class="QPushButton" name="addScXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="1">
-               <widget class="QPushButton" name="subRotXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="1">
-               <widget class="QPushButton" name="subScZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="1">
-               <widget class="QPushButton" name="subScYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="3">
-               <widget class="QPushButton" name="addScYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="3">
-               <widget class="QPushButton" name="addScZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="2">
-               <widget class="QLineEdit" name="shXValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="2">
-               <widget class="QLineEdit" name="rotYValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="2">
-               <widget class="QLineEdit" name="rotXValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="2">
-               <widget class="QLineEdit" name="rotZValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="3">
-               <widget class="QPushButton" name="addShYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="14" column="1">
-               <widget class="QPushButton" name="subShZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="rotXLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>X rotation</string>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="3">
-               <widget class="QPushButton" name="addShXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="14" column="2">
-               <widget class="QLineEdit" name="shZValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="1">
-               <widget class="QPushButton" name="subShXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QPushButton" name="subTransYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="subTransZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="2">
-               <widget class="QLineEdit" name="shYValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="1">
-               <widget class="QPushButton" name="subShYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="0">
-               <widget class="QLabel" name="shYLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Y skew</string>
-                </property>
-               </widget>
-              </item>
-              <item row="14" column="0">
-               <widget class="QLabel" name="shZLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Z skew</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="QPushButton" name="addTransXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="3">
-               <widget class="QPushButton" name="addTransZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="3">
-               <widget class="QPushButton" name="addTransYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="transZLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Z translation</string>
-                </property>
-               </widget>
-              </item>
-              <item row="14" column="3">
-               <widget class="QPushButton" name="addShZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="2">
-               <widget class="QLineEdit" name="scXValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="1">
-               <widget class="QPushButton" name="subScXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="0">
-               <widget class="QLabel" name="scXLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>X scale</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="0">
-               <spacer name="verticalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Minimum</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="rotYLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Y rotation</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
-               <widget class="QPushButton" name="subRotYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <spacer name="verticalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Minimum</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="rotZLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Z rotation</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLineEdit" name="transXValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLineEdit" name="transYValue">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="0">
-               <spacer name="verticalSpacer_5">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Minimum</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="12" column="0">
-               <widget class="QLabel" name="shXLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>X skew</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="3">
-               <widget class="QPushButton" name="addRotXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="1">
-               <widget class="QPushButton" name="subRotZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="3">
-               <widget class="QPushButton" name="addRotYButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="3">
-               <widget class="QPushButton" name="addRotZButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="transYLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>300</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Y translation</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="transXLabel">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>X translation</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QPushButton" name="subTransXButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="../../resources/style.qrc">
-                  <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
-                </property>
-               </widget>
-              </item>
-             </layout>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="1">
+                <widget class="QPushButton" name="subRotXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLineEdit" name="rotZValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLineEdit" name="rotYValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLineEdit" name="rotXValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="subRotYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="subRotZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="rotZLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>z</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="rotYLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>y</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="rotXLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>x</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="addRotXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QPushButton" name="addRotYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QPushButton" name="addRotZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="scaleGroupBox">
+              <property name="title">
+               <string>Scale</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="2" column="0">
+                <widget class="QLabel" name="scZLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>z</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="scXLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>x</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="scYLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>y</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="subScXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="subScYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="subScZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLineEdit" name="scXValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLineEdit" name="scYValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLineEdit" name="scZValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="addScXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QPushButton" name="addScYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QPushButton" name="addScZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="skewGroupBox">
+              <property name="title">
+               <string>Skew</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="2" column="1">
+                <widget class="QPushButton" name="subShZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QLineEdit" name="shZValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLineEdit" name="shYValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="shXLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>x</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="shZLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>z</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLineEdit" name="shXValue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="subShYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="subShXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/minus.png</normaloff>:/qss_icons/icons/minus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="shYLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>y</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="addShXButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QPushButton" name="addShYButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QPushButton" name="addShZButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/style.qrc">
+                   <normaloff>:/qss_icons/icons/plus.png</normaloff>:/qss_icons/icons/plus.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </item>
             <item>
              <spacer name="verticalSpacer_6">
@@ -2406,98 +1899,108 @@
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="textureLayout">
-              <item>
-               <layout class="QHBoxLayout" name="sceneTextureLayout">
-                <item>
-                 <widget class="QLabel" name="sceneTextureLabel">
-                  <property name="minimumSize">
-                   <size>
-                    <width>70</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>70</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Scene</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="ClickableLabel" name="sceneTexture">
-                  <property name="minimumSize">
-                   <size>
-                    <width>80</width>
-                    <height>80</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>80</width>
-                    <height>80</height>
-                   </size>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="objTextureLayout">
-                <item>
-                 <widget class="QLabel" name="objTextureLabel">
-                  <property name="minimumSize">
-                   <size>
-                    <width>70</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>70</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Object</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="ClickableLabel" name="objTexture">
-                  <property name="minimumSize">
-                   <size>
-                    <width>80</width>
-                    <height>80</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>80</width>
-                    <height>80</height>
-                   </size>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
+             <widget class="QGroupBox" name="textureGroupBox">
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="1" column="0">
+                <widget class="QLabel" name="objTextureLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Object</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="sceneTextureLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Scene</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="ClickableLabel" name="sceneTexture">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="ClickableLabel" name="objTexture">
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>

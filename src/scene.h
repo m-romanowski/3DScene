@@ -8,18 +8,23 @@
 #include <camera.h>
 #include <light.h>
 #include <color.h>
+#include <mesh.h>
 
 class Scene
 {
 public:
     Scene();
-    Scene(Color color, Light light, Camera camera);
-    Scene(Texture texture, Light light, Camera camera);
+    Scene(Scene& other);
+    Scene(Color color, Light light, Camera camera, std::vector<Mesh> meshes);
+    Scene(Texture texture, Light light, Camera camera, std::vector<Mesh> meshes);
+
+    void clearMeshes();
 
     Light light;
     Camera camera;
     Texture texture;
     Color color;
+    std::vector<Mesh> meshes;
 };
 
 #endif // SCENE_H

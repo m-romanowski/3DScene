@@ -70,15 +70,15 @@ void XMLParser::writeXML(std::vector<Mesh> meshes, Scene scene, QString filename
         mesh.appendChild(rotation);
 
         QDomElement scaling = document.createElement("scaling");
-        scaling.setAttribute("x", QString::number(meshes[i].scaling.x()));
-        scaling.setAttribute("y", QString::number(meshes[i].scaling.y()));
-        scaling.setAttribute("z", QString::number(meshes[i].scaling.z()));
+        scaling.setAttribute("x", QString::number(meshes[i].scale.x()));
+        scaling.setAttribute("y", QString::number(meshes[i].scale.y()));
+        scaling.setAttribute("z", QString::number(meshes[i].scale.z()));
         mesh.appendChild(scaling);
 
         QDomElement shearing = document.createElement("shearing");
-        shearing.setAttribute("x", QString::number(meshes[i].shearing.x()));
-        shearing.setAttribute("y", QString::number(meshes[i].shearing.y()));
-        shearing.setAttribute("z", QString::number(meshes[i].shearing.z()));
+        shearing.setAttribute("x", QString::number(meshes[i].skew.x()));
+        shearing.setAttribute("y", QString::number(meshes[i].skew.y()));
+        shearing.setAttribute("z", QString::number(meshes[i].skew.z()));
         mesh.appendChild(shearing);
     }
 
@@ -111,7 +111,7 @@ void XMLParser::writeXML(std::vector<Mesh> meshes, Scene scene, QString filename
 std::vector<float> XMLParser::convertValue(QString str)
 {
     std::vector<float> numbers;
-    QStringList list = str.split(" ", QString::SkipEmptyParts);
+    QStringList list = str.split(" ", Qt::SkipEmptyParts);
 
     foreach (QString num, list)
         numbers.push_back(num.toFloat());
@@ -150,7 +150,7 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                     return;
                 }
 
-                meshes[index].vertices.push_back(Vertex(QVector3D(itemElement.attribute(attributes[0]).toFloat(),
+                scene.meshes[index].vertices.push_back(Vertex(QVector3D(itemElement.attribute(attributes[0]).toFloat(),
                                                                   itemElement.attribute(attributes[1]).toFloat(),
                                                                   itemElement.attribute(attributes[2]).toFloat()),
                                                         QVector3D(itemElement.attribute(attributes[3]).toFloat(),
@@ -169,7 +169,7 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                     return;
                 }
 
-                meshes[index].faces.push_back(Face(itemElement.attribute(attributes[0]).toInt(),
+                scene.meshes[index].faces.push_back(Face(itemElement.attribute(attributes[0]).toInt(),
                                                    itemElement.attribute(attributes[1]).toInt(),
                                                    itemElement.attribute(attributes[2]).toInt()));
             }
@@ -197,21 +197,18 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                 else if((itemElement.attribute(attributes[1]).isEmpty() && !itemElement.attribute(attributes[0]).isEmpty()) ||
                         (!itemElement.attribute(attributes[1]).isEmpty() && !itemElement.attribute(attributes[0]).isEmpty()))
                 {
-                    meshes[index].texture.filename = itemElement.attribute(attributes[0]);
+                    scene.meshes[index].texture = Texture(itemElement.attribute(attributes[0]));
                 }
                 // Otherwise, I'm reading the color
                 else
                 {
                     convertedValue = convertValue(itemElement.attribute(attributes[1]));
-
-                    meshes[index].texture.color.setRed(convertedValue[0]);
-                    meshes[index].texture.color.setGreen(convertedValue[1]);
-                    meshes[index].texture.color.setBlue(convertedValue[2]);
-                    meshes[index].texture.color.setAlpha(convertedValue[3]);
+                    scene.meshes[index].texture = Texture(
+                                Color(convertedValue[0], convertedValue[1], convertedValue[2], convertedValue[3]),
+                                itemElement.attribute(attributes[2]).toInt(),
+                                itemElement.attribute(attributes[3]).toInt()
+                            );
                 }
-
-                meshes[index].texture.width = itemElement.attribute(attributes[2]).toInt();
-                meshes[index].texture.height = itemElement.attribute(attributes[3]).toInt();
             }
 
             if(type == 3)
@@ -222,9 +219,9 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                     return;
                 }
 
-                meshes[index].position.setX(itemElement.attribute(attributes[0]).toFloat());
-                meshes[index].position.setY(itemElement.attribute(attributes[1]).toFloat());
-                meshes[index].position.setZ(itemElement.attribute(attributes[2]).toFloat());
+                scene.meshes[index].position.setX(itemElement.attribute(attributes[0]).toFloat());
+                scene.meshes[index].position.setY(itemElement.attribute(attributes[1]).toFloat());
+                scene.meshes[index].position.setZ(itemElement.attribute(attributes[2]).toFloat());
             }
 
             if(type == 4)
@@ -235,9 +232,9 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                     return;
                 }
 
-                meshes[index].rotation.setX(itemElement.attribute(attributes[0]).toFloat());
-                meshes[index].rotation.setY(itemElement.attribute(attributes[1]).toFloat());
-                meshes[index].rotation.setZ(itemElement.attribute(attributes[2]).toFloat());
+                scene.meshes[index].rotation.setX(itemElement.attribute(attributes[0]).toFloat());
+                scene.meshes[index].rotation.setY(itemElement.attribute(attributes[1]).toFloat());
+                scene.meshes[index].rotation.setZ(itemElement.attribute(attributes[2]).toFloat());
             }
 
             if(type == 5)
@@ -248,9 +245,9 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                     return;
                 }
 
-                meshes[index].scaling.setX(itemElement.attribute(attributes[0]).toFloat());
-                meshes[index].scaling.setY(itemElement.attribute(attributes[1]).toFloat());
-                meshes[index].scaling.setZ(itemElement.attribute(attributes[2]).toFloat());
+                scene.meshes[index].scale.setX(itemElement.attribute(attributes[0]).toFloat());
+                scene.meshes[index].scale.setY(itemElement.attribute(attributes[1]).toFloat());
+                scene.meshes[index].scale.setZ(itemElement.attribute(attributes[2]).toFloat());
             }
 
             if(type == 6)
@@ -261,9 +258,9 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                     return;
                 }
 
-                meshes[index].shearing.setX(itemElement.attribute(attributes[0]).toFloat());
-                meshes[index].shearing.setY(itemElement.attribute(attributes[1]).toFloat());
-                meshes[index].shearing.setZ(itemElement.attribute(attributes[2]).toFloat());
+                scene.meshes[index].skew.setX(itemElement.attribute(attributes[0]).toFloat());
+                scene.meshes[index].skew.setY(itemElement.attribute(attributes[1]).toFloat());
+                scene.meshes[index].skew.setZ(itemElement.attribute(attributes[2]).toFloat());
             }
 
             if(type == 7)
@@ -311,17 +308,13 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                 else if((itemElement.attribute(attributes[3]).isEmpty() && !itemElement.attribute(attributes[5]).isEmpty()) ||
                         (!itemElement.attribute(attributes[3]).isEmpty() && !itemElement.attribute(attributes[5]).isEmpty()))
                 {
-                    scene.texture.filename = itemElement.attribute(attributes[5]);
+                    scene.texture = Texture(itemElement.attribute(attributes[5]));
                 }
                 // Otherwise, I'm reading the color
                 else
                 {
                     convertedValue = convertValue(itemElement.attribute(attributes[3]));
-
-                    scene.color.setRed(convertedValue[0]);
-                    scene.color.setGreen(convertedValue[1]);
-                    scene.color.setBlue(convertedValue[2]);
-                    scene.color.setAlpha(convertedValue[3]);
+                    scene.color = Color(convertedValue[0], convertedValue[1], convertedValue[2], convertedValue[3]);
                 }
 
                 // Light
@@ -338,7 +331,7 @@ void XMLParser::listElement(QDomElement root, QString tagname, std::vector<QStri
                     return;
                 }
 
-                meshes[i].name = itemElement.attribute(attributes[0]);
+                scene.meshes[i].name = itemElement.attribute(attributes[0]);
 
             }
         }
@@ -369,7 +362,7 @@ void XMLParser::readXML(QString filename)
     QDomElement root = document.firstChildElement();
     QDomNodeList items = root.elementsByTagName("mesh");
 
-    meshes.resize(items.count(), Mesh(""));
+    scene.meshes.resize(items.count(), Mesh(""));
     std::vector<QString> attributes;
     listElement(root, "mesh", attributes = {"name"}, 8);
 
@@ -415,7 +408,7 @@ void XMLParser::readModel(std::vector<Mesh> &meshes, QString filename)
     QDomElement root = document.firstChildElement();
     QDomNodeList items = root.elementsByTagName("mesh");
 
-    this->meshes.resize(items.count(), Mesh(""));
+    scene.meshes.resize(items.count(), Mesh(""));
 
     std::vector<QString> attributes;
     listElement(root, "mesh", attributes = {"name"}, 8);
@@ -437,15 +430,15 @@ void XMLParser::readModel(std::vector<Mesh> &meshes, QString filename)
         }
     }
 
-    for(uint i = 0; i < this->meshes.size(); i++)
+    for(uint i = 0; i < scene.meshes.size(); i++)
     {
         if(meshes.size() > 0)
         {
-            this->meshes[i].name = this->meshes[i].name + QString::number(meshes.back().id + 1);;
-            this->meshes[i].id = meshes.back().id + 1;
+            scene.meshes[i].name = scene.meshes[i].name + QString::number(scene.meshes.back().id + 1);;
+            scene.meshes[i].id = scene.meshes.back().id + 1;
         }
 
-        meshes.push_back(this->meshes[i]);
+        meshes.push_back(scene.meshes[i]);
     }
 }
 
@@ -455,11 +448,6 @@ bool XMLParser::is_number(const std::string& s)
         s.end(), [](char c) { return !std::isdigit(c); }) == s.end();
 }
 
-std::vector<Mesh> XMLParser::getMeshes()
-{
-    return meshes;
-}
-
 Scene XMLParser::getScene()
 {
     return scene;
@@ -467,6 +455,6 @@ Scene XMLParser::getScene()
 
 void XMLParser::clearBuffor()
 {
-    if(meshes.size() > 0)
-        meshes.clear();
+    if(scene.meshes.size() > 0)
+        scene.meshes.clear();
 }

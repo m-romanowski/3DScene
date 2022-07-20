@@ -21,16 +21,32 @@ Scene::Scene()
     color = Color(45, 46, 48, 255);
 }
 
-Scene::Scene(Color color, Light light, Camera camera)
+Scene::Scene(Scene& other)
+{
+    this->light = other.light;
+    this->camera = other.camera;
+    this->color = other.color;
+    this->texture = other.texture;
+    this->meshes = other.meshes;
+}
+
+Scene::Scene(Color color, Light light, Camera camera, std::vector<Mesh> meshes = std::vector<Mesh>())
 {
     this->light = light;
     this->camera = camera;
     this->color = color;
+    this->meshes = meshes;
 }
 
-Scene::Scene(Texture texture, Light light, Camera camera)
+Scene::Scene(Texture texture, Light light, Camera camera, std::vector<Mesh> meshes = std::vector<Mesh>())
 {
     this->texture = texture;
     this->light = light;
     this->camera = camera;
+    this->meshes = meshes;
+}
+
+void Scene::clearMeshes()
+{
+    meshes.clear();
 }

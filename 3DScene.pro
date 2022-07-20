@@ -12,6 +12,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = 3DScene
 TEMPLATE = app
 RESOURCES += resources/style.qrc
+CONFIG += c++17
 INCLUDEPATH = / \
     src
 
@@ -30,6 +31,7 @@ SOURCES += \
         src/main.cpp \
         src/mainwindow.cpp \
     src/clickablelabel.cpp \
+    src/renderer.cpp \
     src/texturedialog.cpp \
     src/projection.cpp \
     src/vertex.cpp \
@@ -47,6 +49,7 @@ SOURCES += \
 HEADERS += \
         src/mainwindow.h \
     src/clickablelabel.h \
+    src/renderer.h \
     src/texturedialog.h \
     src/projection.h \
     src/vertex.h \

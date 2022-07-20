@@ -15,28 +15,29 @@
 #include <QToolTip>
 #include <QAction>
 #include <QMenu>
-#include <QDebug>
 
 #include <clickablelabel.h>
 #include <texturedialog.h>
 #include <animationdialog.h>
 #include <animation.h>
-#include <color.h>
-#include <mesh.h>
-#include <projection.h>
-#include <face.h>
 #include <camera.h>
 #include <light.h>
-#include <scene.h>
 #include <xmlparser.h>
+#include <renderer.h>
 
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
+private:
+    static const QString LIGHT_OBJECT_NAME;
+    static const QString CAMERA_OBJECT_NAME;
+    static const QString OBJECT_TEXTURE_NAME;
+    static const QString SCENE_TEXTURE_NAME;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -44,53 +45,29 @@ public:
 
     void clearTree();
     void refreshTree();
-    void clearMeshes();
     int getSelectedItem(QString itemName);
-    void refreshScene();
-    void clearScene(Color color);
     void animation();
-    void render(std::vector<Mesh> &meshes, Camera cam);
 
 private:
+    Scene* getScene();
+    std::vector<Mesh>& getMeshes();
+    void loadModel(QString resourceName);
+
     Ui::MainWindow *ui;
 
     QPoint lastMousePosition;
-    QScrollArea *scrollArea;
+    QScrollArea* scrollArea;
     bool isMoving;
 
-    // Scene
-    QImage *img;
-    int sceneX, sceneY, sceneWidth, sceneHeight;
-
-    // Scene object
-    Scene scene;
-    Projection *proc;
-    std::vector<Mesh> meshes;
-    std::vector<float> depthBuffer;
-
     // Animations
-    QTimer *timer;
+    QTimer* timer;
     bool animationStarted;
-
-    // Fps counter
-    QTime m_timer;
-    float target_time;
-    int m_frameCount;
 
     // Project management
     QString currentProject;
-
-    void putPixel(int x, int y, float z, Color color);
-    void drawPoint(QVector3D point, Color color);
-    float clamp(float value, float min, float max);
-    float interpolate(float min, float max, float gradient);
-    float computeAngle(QVector3D vertex, QVector3D normal, QVector3D lightPosition);
-    void drawLine(lineData data, Vertex va, Vertex vb, Vertex vc, Vertex vd, Color color, Texture texture);
-    void drawTriangle(Vertex v1, Vertex v2, Vertex v3, Color color, Texture texture);
+    std::unique_ptr<Renderer> renderer;
 
 private slots:
-    void paintEvent(QPaintEvent *);
-    void resizeEvent(QResizeEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *event);
     void mouseReleaseEvent(QMouseEvent *event);

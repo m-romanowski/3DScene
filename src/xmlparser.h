@@ -24,15 +24,13 @@ public:
     void readModel(std::vector<Mesh> &meshes, QString filename);
     void clearBuffor();
     bool is_number(const std::string& s);
-    std::vector<Mesh> getMeshes();
     Scene getScene();
 
 private:
-    std::vector <Mesh> meshes;
-    Scene scene;
-
     void listElement(QDomElement root, QString tagname, std::vector<QString> &attributes, ushort type, int index);
     std::vector<float> convertValue(QString str);
+
+    Scene scene;
 };
 
 #endif // XMLPARSER_H
